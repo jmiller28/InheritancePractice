@@ -11,10 +11,33 @@ package my.concrete;
  * @author jmiller
  */
 public class Employee {
-    public String name;
-    public int employeeNumber;
-    public boolean isActive;
-    
+    private String name;
+    private int employeeNumber;
+    private boolean isActive;
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public int getEmployeeNumber() {
+        return employeeNumber;
+    }
+
+    public void setEmployeeNumber(int employeeNumber) {
+        this.employeeNumber = employeeNumber;
+    }
+
+    public boolean isIsActive() {
+        return isActive;
+    }
+
+    public void setIsActive(boolean isActive) {
+        this.isActive = isActive;
+    }
     
     
 }

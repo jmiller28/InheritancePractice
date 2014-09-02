@@ -11,9 +11,33 @@ package my.concrete;
  * @author jmiller
  */
 public class SalariedEmployee extends Employee{
-    public boolean isExempt;
-    public double annualSalary;
-    public boolean bonusEligible;
+    private boolean isExempt;
+    private double annualSalary;
+    private boolean bonusEligible;
+
+    public boolean isIsExempt() {
+        return isExempt;
+    }
+
+    public void setIsExempt(boolean isExempt) {
+        this.isExempt = isExempt;
+    }
+
+    public double getAnnualSalary() {
+        return annualSalary;
+    }
+
+    public void setAnnualSalary(double annualSalary) {
+        this.annualSalary = annualSalary;
+    }
+
+    public boolean isBonusEligible() {
+        return bonusEligible;
+    }
+
+    public void setBonusEligible(boolean bonusEligible) {
+        this.bonusEligible = bonusEligible;
+    }
     
     
     
