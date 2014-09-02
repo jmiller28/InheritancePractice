@@ -11,5 +11,10 @@ package my.concrete;
  * @author jmiller
  */
 public class Employee {
+    public String name;
+    public int employeeNumber;
+    public boolean isActive;
+    
+    
     
 }

@@ -11,5 +11,10 @@ package my.concrete;
  * @author jmiller
  */
 public class SalariedEmployee extends Employee{
+    public boolean isExempt;
+    public double annualSalary;
+    public boolean bonusEligible;
+    
+    
     
 }

@@ -10,6 +10,8 @@ package my.concrete;
  *
  * @author jmiller
  */
-public class HourlyEmployee {
+public class HourlyEmployee extends Employee {
+    public double hourlyRate;
+    
     
 }
