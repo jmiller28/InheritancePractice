@@ -1,19 +1,10 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
 package my.concrete;
 
-/**
- *
- * @author jmiller
- */
-public class SalariedEmployee extends Employee{
+public class SalariedEmployee extends Employee {
+
     private boolean isExempt;
     private double annualSalary;
-    private boolean bonusEligible;
+    private boolean isBonusEligible;
 
     public SalariedEmployee(String name, int employeeNumber, String jobTitle) {
         super(name, employeeNumber, jobTitle);
@@ -36,13 +27,11 @@ public class SalariedEmployee extends Employee{
     }
 
     public boolean isBonusEligible() {
-        return bonusEligible;
+        return isBonusEligible;
     }
 
-    public void setBonusEligible(boolean bonusEligible) {
-        this.bonusEligible = bonusEligible;
+    public void setIsBonusEligible(boolean isBonusEligible) {
+        this.isBonusEligible = isBonusEligible;
     }
-    
-    
-    
+
 }
