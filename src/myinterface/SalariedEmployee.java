@@ -6,8 +6,10 @@ public class SalariedEmployee extends InterfaceDemo {
     private double annualSalary;
     private boolean isBonusEligible;
 
-    public SalariedEmployee(String name, int employeeNumber, String jobTitle) {
-        super(name, employeeNumber, jobTitle);
+    public SalariedEmployee(boolean isExempt, double annualSalary, boolean isBonusEligible) {
+        this.isExempt = isExempt;
+        this.annualSalary = annualSalary;
+        this.isBonusEligible = isBonusEligible;
     }
 
     public boolean isIsExempt() {

@@ -4,8 +4,12 @@ public class SalaryPlusCommissionEmployee extends SalariedEmployee {
 
     private double commissionPercent;
 
-    public SalaryPlusCommissionEmployee(String name, int employeeNumber, String jobTitle) {
-        super(name, employeeNumber, jobTitle);
+    public SalaryPlusCommissionEmployee(boolean isExempt, double annualSalary, boolean isBonusEligible) {
+        super(isExempt, annualSalary, isBonusEligible);
+    }
+    
+    public void SalaryPlusCommissionEmployee(double commissionPercent) {
+        this.commissionPercent = commissionPercent;
     }
 
     public double getCommissionPercent() {

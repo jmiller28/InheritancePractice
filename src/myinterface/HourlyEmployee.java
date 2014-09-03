@@ -1,12 +1,8 @@
 package myinterface;
 
-public class HourlyEmployee extends InterfaceDemo implements Employee {
+public class HourlyEmployee extends InterfaceDemo {
 
     private double hourlyRate;
-
-    public HourlyEmployee(double hourlyRate) {
-        this.hourlyRate = hourlyRate;
-    }
 
     public double getHourlyRate() {
         return hourlyRate;
