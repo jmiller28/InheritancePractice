@@ -1,6 +1,6 @@
 package myinterface;
 
-public class SalariedEmployee extends Employee {
+public class SalariedEmployee extends InterfaceDemo {
 
     private boolean isExempt;
     private double annualSalary;

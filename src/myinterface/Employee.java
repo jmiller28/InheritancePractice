@@ -1,35 +1,15 @@
 package myinterface;
 
-public class Employee {
+public interface Employee {
 
-    private String name;
-    private int employeeNumber;
-    private String jobTitle;
+    public String getName();
 
-    public Employee(String name, int employeeNumber, String jobTitle) {
-        this.name = name;
-        this.employeeNumber = employeeNumber;
-        this.jobTitle = jobTitle;
-    }
+    public void setName(String name);
 
-    public String getName() {
-        return name;
-    }
+    public int getEmployeeNumber();
 
-    public void setName(String name) {
-        this.name = name;
-    }
+    public String getJobTitle();
 
-    public int getEmployeeNumber() {
-        return employeeNumber;
-    }
-
-    public String getJobTitle() {
-        return jobTitle;
-    }
-
-    public void setJobTitle(String jobTitle) {
-        this.jobTitle = jobTitle;
-    }
+    public void setJobTitle(String jobTitle);
 
 }
