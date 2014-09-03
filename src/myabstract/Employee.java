@@ -6,27 +6,15 @@ public abstract class Employee {
     private int employeeNumber;
     private String jobTitle;
 
-    public Employee(String name, int employeeNumber, String jobTitle) {
-        this.name = name;
-        this.employeeNumber = employeeNumber;
-        this.jobTitle = jobTitle;
-    }
-
-    public String getName() {
-        return name;
-    }
+    public abstract String getName();
 
     public void setName(String name) {
         this.name = name;
     }
 
-    public int getEmployeeNumber() {
-        return employeeNumber;
-    }
+    public abstract int getEmployeeNumber();
 
-    public String getJobTitle() {
-        return jobTitle;
-    }
+    public abstract String getJobTitle();
 
     public void setJobTitle(String jobTitle) {
         this.jobTitle = jobTitle;

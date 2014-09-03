@@ -1,9 +1,13 @@
 package myabstract;
 
-public class AbstractDemo extends Employee{
+public abstract class AbstractDemo extends Employee{
 
     public static void main(String[] args) {
-        HourlyEmployee ee1 = new HourlyEmployee("John", 1, "Boss");
+        HourlyEmployee ee1 = new HourlyEmployee();
+        ee1.setName("John");
+        ee1.setJobTitle("Boss");
+        ee1.setEmployeeNumber(1);
+        ee1.setHourlyRate(75.00);
         SalariedEmployee ee2 = new SalariedEmployee("John", 2, "Boss");
         SalaryPlusCommissionEmployee ee3 = new SalaryPlusCommissionEmployee("John", 3, "Boss");
         ee1.setHourlyRate(55.00);
@@ -19,8 +23,15 @@ public class AbstractDemo extends Employee{
         System.out.println(ee3.getEmployeeNumber() + ": " + ee3.getCommissionPercent());
     }
 
-    public AbstractDemo(String name, int employeeNumber, String jobTitle) {
-        super(name, employeeNumber, jobTitle);
-    }
+    @Override
+   public abstract String getName();
+
+    @Override
+    public abstract int getEmployeeNumber();
+
+    @Override
+    public abstract String getJobTitle();
+
+    
 
 }
