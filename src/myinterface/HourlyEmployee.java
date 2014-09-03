@@ -2,7 +2,16 @@ package myinterface;
 
 public class HourlyEmployee extends InterfaceDemo {
 
+    private String name;
+    private int employeeNumber;
+    private String jobTitle;
     private double hourlyRate;
+
+    public void Employee(String name, int employeeNumber, String jobTitle) {
+        this.name = name;
+        this.employeeNumber = employeeNumber;
+        this.jobTitle = jobTitle;
+    }
 
     public double getHourlyRate() {
         return hourlyRate;
@@ -14,27 +23,31 @@ public class HourlyEmployee extends InterfaceDemo {
 
     @Override
     public String getName() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return name;
     }
 
     @Override
     public void setName(String name) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        this.name = name;
     }
 
     @Override
     public int getEmployeeNumber() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return employeeNumber;
+    }
+
+    public void setEmployeeNumber(int employeeNumber) {
+        this.employeeNumber = employeeNumber;
     }
 
     @Override
     public String getJobTitle() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return jobTitle;
     }
 
     @Override
     public void setJobTitle(String jobTitle) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        this.jobTitle = jobTitle;
     }
 
 }

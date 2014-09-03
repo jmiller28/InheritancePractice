@@ -4,9 +4,9 @@ public class SalaryPlusCommissionEmployee extends SalariedEmployee {
 
     private double commissionPercent;
 
-    public SalaryPlusCommissionEmployee(boolean isExempt, double annualSalary, boolean isBonusEligible) {
-        super(isExempt, annualSalary, isBonusEligible);
-    }
+    //public SalaryPlusCommissionEmployee(boolean isExempt, double annualSalary, boolean isBonusEligible) {
+    //    super(isExempt, annualSalary, isBonusEligible);
+    //}
     
     public void SalaryPlusCommissionEmployee(double commissionPercent) {
         this.commissionPercent = commissionPercent;

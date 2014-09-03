@@ -1,6 +1,6 @@
 package myabstract;
 
-public class SalariedEmployee implements Employee {
+public class SalariedEmployee extends Employee {
 
     private boolean isExempt;
     private double annualSalary;
