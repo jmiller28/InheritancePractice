@@ -15,6 +15,10 @@ public class SalariedEmployee extends Employee{
     private double annualSalary;
     private boolean bonusEligible;
 
+    public SalariedEmployee(String name, int employeeNumber, String jobTitle) {
+        super(name, employeeNumber, jobTitle);
+    }
+
     public boolean isIsExempt() {
         return isExempt;
     }

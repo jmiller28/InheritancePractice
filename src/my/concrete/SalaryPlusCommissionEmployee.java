@@ -13,6 +13,10 @@ package my.concrete;
 public class SalaryPlusCommissionEmployee extends SalariedEmployee{
     private double commissionPercent;
 
+    public SalaryPlusCommissionEmployee(String name, int employeeNumber, String jobTitle) {
+        super(name, employeeNumber, jobTitle);
+    }
+
     public double getCommissionPercent() {
         return commissionPercent;
     }

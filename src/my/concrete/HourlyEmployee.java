@@ -1,17 +1,12 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
 package my.concrete;
 
-/**
- *
- * @author jmiller
- */
 public class HourlyEmployee extends Employee {
+
     private double hourlyRate;
+
+    public HourlyEmployee(String name, int employeeNumber, String jobTitle) {
+        super(name, employeeNumber, jobTitle);
+    }
 
     public double getHourlyRate() {
         return hourlyRate;
@@ -20,6 +15,5 @@ public class HourlyEmployee extends Employee {
     public void setHourlyRate(double hourlyRate) {
         this.hourlyRate = hourlyRate;
     }
-    
-    
+
 }
