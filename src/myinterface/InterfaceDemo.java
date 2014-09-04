@@ -1,5 +1,7 @@
 package myinterface;
 
+import java.time.LocalDate;
+
 public abstract class InterfaceDemo implements Employee {
 
     public static void main(String[] args) {
@@ -10,8 +12,8 @@ public abstract class InterfaceDemo implements Employee {
         ee1.setJobTitle("Boss");
         ee1.setEmployeeNumber(1);
         ee1.setHourlyRate(75.00);
+        
         SalariedEmployee ee2 = new SalariedEmployee();
-        SalaryPlusCommissionEmployee ee3 = new SalaryPlusCommissionEmployee();
         ee1.setHourlyRate(55.00);
         ee2.setFirstName("John");
         ee2.setJobTitle("Boss");
@@ -19,6 +21,8 @@ public abstract class InterfaceDemo implements Employee {
         ee2.setIsExempt(true);
         ee2.setAnnualSalary(80000.00);
         ee2.setIsBonusEligible(false);
+        
+        SalaryPlusCommissionEmployee ee3 = new SalaryPlusCommissionEmployee();
         ee3.setFirstName("John");
         ee3.setJobTitle("Boss");
         ee3.setEmployeeNumber(3);

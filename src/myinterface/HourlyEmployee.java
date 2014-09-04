@@ -1,12 +1,14 @@
 package myinterface;
 
+import java.time.LocalDate;
+
 public class HourlyEmployee implements Employee {
 
     private String lastName;
     private String firstName;
     private char middleInitial;
     private int employeeNumber;
-    private String jobTitle;
+    private LocalDate startDate;
     private double hourlyRate;
 
     public double getHourlyRate() {
@@ -27,17 +29,6 @@ public class HourlyEmployee implements Employee {
     public void setEmployeeNumber(int employeeNumber) {
         //validation goes here
         this.employeeNumber = employeeNumber;
-    }
-
-    @Override
-    public String getJobTitle() {
-        return jobTitle;
-    }
-
-    @Override
-    public void setJobTitle(String jobTitle) {
-        //validation goes here
-        this.jobTitle = jobTitle;
     }
 
     @Override
@@ -71,6 +62,17 @@ public class HourlyEmployee implements Employee {
     public void setMiddleIntial(char middleInitial) {
         //validation goes here
         this.middleInitial = middleInitial;
+    }
+
+    @Override
+    public LocalDate getStartDate() {
+        return startDate;
+    }
+
+    @Override
+    public void setStartDate(LocalDate startDate) {
+        //validation goes here
+        this.startDate = startDate;
     }
 
 }

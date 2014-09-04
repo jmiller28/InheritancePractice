@@ -1,5 +1,7 @@
 package myinterface;
 
+import java.time.LocalDate;
+
 public interface Employee {
 
     public abstract String getFirstName();
@@ -18,8 +20,8 @@ public interface Employee {
 
     public abstract void setEmployeeNumber(int employeeNumber);
 
-    public abstract String getJobTitle();
+    public abstract LocalDate getStartDate();
 
-    public abstract void setJobTitle(String jobTitle);
+    public abstract void setStartDate(LocalDate startDate);
 
 }
