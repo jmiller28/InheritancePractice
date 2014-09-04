@@ -1,34 +1,21 @@
 package myinterface;
 
-public class HourlyEmployee extends InterfaceDemo {
+public class HourlyEmployee implements Employee {
 
-    private String name;
+    private String lastName;
+    private String firstName;
+    private char middleInitial;
     private int employeeNumber;
     private String jobTitle;
     private double hourlyRate;
-
-    public void Employee(String name, int employeeNumber, String jobTitle) {
-        this.name = name;
-        this.employeeNumber = employeeNumber;
-        this.jobTitle = jobTitle;
-    }
 
     public double getHourlyRate() {
         return hourlyRate;
     }
 
     public void setHourlyRate(double hourlyRate) {
+        //validation goes here
         this.hourlyRate = hourlyRate;
-    }
-
-    @Override
-    public String getName() {
-        return name;
-    }
-
-    @Override
-    public void setName(String name) {
-        this.name = name;
     }
 
     @Override
@@ -36,7 +23,9 @@ public class HourlyEmployee extends InterfaceDemo {
         return employeeNumber;
     }
 
+    @Override
     public void setEmployeeNumber(int employeeNumber) {
+        //validation goes here
         this.employeeNumber = employeeNumber;
     }
 
@@ -47,7 +36,41 @@ public class HourlyEmployee extends InterfaceDemo {
 
     @Override
     public void setJobTitle(String jobTitle) {
+        //validation goes here
         this.jobTitle = jobTitle;
+    }
+
+    @Override
+    public String getFirstName() {
+        return firstName;
+    }
+
+    @Override
+    public void setFirstName(String firstName) {
+        //validation goes here
+        this.firstName = firstName;
+    }
+
+    @Override
+    public String getLastName() {
+        return lastName;
+    }
+
+    @Override
+    public void setLastName(String lastName) {
+        //validation goes here
+        this.lastName = lastName;
+    }
+
+    @Override
+    public char getMiddleIntial() {
+        return middleInitial;
+    }
+
+    @Override
+    public void setMiddleIntial(char middleInitial) {
+        //validation goes here
+        this.middleInitial = middleInitial;
     }
 
 }

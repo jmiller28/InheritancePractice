@@ -2,14 +2,24 @@ package myinterface;
 
 public interface Employee {
 
-    public String getName();
+    public abstract String getFirstName();
 
-    public void setName(String name);
+    public abstract void setFirstName(String firstName);
 
-    public int getEmployeeNumber();
+    public abstract String getLastName();
 
-    public String getJobTitle();
+    public abstract void setLastName(String lastName);
 
-    public void setJobTitle(String jobTitle);
+    public abstract char getMiddleIntial();
+
+    public abstract void setMiddleIntial(char middleInitial);
+
+    public abstract int getEmployeeNumber();
+
+    public abstract void setEmployeeNumber(int employeeNumber);
+
+    public abstract String getJobTitle();
+
+    public abstract void setJobTitle(String jobTitle);
 
 }
