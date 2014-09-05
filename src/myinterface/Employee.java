@@ -1,6 +1,8 @@
 package myinterface;
 
+import java.util.Date;
 import java.time.LocalDate;
+import java.util.Calendar;
 
 public interface Employee {
 
@@ -20,8 +22,10 @@ public interface Employee {
 
     public abstract void setEmployeeNumber(int employeeNumber);
 
-    public abstract LocalDate getStartDate();
+    public abstract Calendar getStartDate();
 
-    public abstract void setStartDate(LocalDate startDate);
+    public abstract void setStartDate(Calendar startDate);
+
+    public abstract long getLengthOfService();
 
 }
