@@ -1,12 +1,16 @@
 package myinterface;
 
+import java.util.Calendar;
+
 public class SalariedEmployee implements Employee {
 
     private String lastName;
     private String firstName;
     private char middleInitial;
     private int employeeNumber;
-    private String jobTitle;
+    private Calendar startDate;
+    Calendar currentDate = Calendar.getInstance();
+
     private boolean isExempt;
     private double annualSalary;
     private boolean isBonusEligible;
@@ -20,17 +24,6 @@ public class SalariedEmployee implements Employee {
     public void setEmployeeNumber(int employeeNumber) {
         //validation goes here
         this.employeeNumber = employeeNumber;
-    }
-
-    @Override
-    public String getJobTitle() {
-        return jobTitle;
-    }
-
-    @Override
-    public void setJobTitle(String jobTitle) {
-        //validation goes here
-        this.jobTitle = jobTitle;
     }
 
     @Override
@@ -91,6 +84,28 @@ public class SalariedEmployee implements Employee {
     public void setIsBonusEligible(boolean isBonusEligible) {
         //validation goes here
         this.isBonusEligible = isBonusEligible;
+    }
+
+    @Override
+    public Calendar getStartDate() {
+        return startDate;
+    }
+
+    @Override
+    public void setStartDate(Calendar startDate) {
+        //validation goes here
+        this.startDate = startDate;
+    }
+
+    @Override
+    public double getYearsOfService() {
+        long milsecs1 = startDate.getTimeInMillis();
+        long milsecs2 = currentDate.getTimeInMillis();
+        long diff = milsecs2 - milsecs1;
+        long ddays = diff / (24 * 60 * 60 * 1000);
+        double yearsOfService = ddays / 365.0;
+        yearsOfService = Math.ceil(yearsOfService);
+        return yearsOfService;
     }
 
 }

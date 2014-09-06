@@ -1,7 +1,5 @@
 package myinterface;
 
-import java.util.Date;
-import java.time.LocalDate;
 import java.util.Calendar;
 
 public interface Employee {
@@ -26,6 +24,6 @@ public interface Employee {
 
     public abstract void setStartDate(Calendar startDate);
 
-    public abstract long getLengthOfService();
+    public abstract double getYearsOfService();
 
 }

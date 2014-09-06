@@ -7,7 +7,7 @@ public class SalariedEmployee extends Employee {
     private boolean isBonusEligible;
 
     public SalariedEmployee(String name, int employeeNumber, String jobTitle) {
-        super(name, employeeNumber, jobTitle);
+        //super(name, employeeNumber, jobTitle);
     }
 
     public boolean isIsExempt() {
@@ -32,6 +32,21 @@ public class SalariedEmployee extends Employee {
 
     public void setIsBonusEligible(boolean isBonusEligible) {
         this.isBonusEligible = isBonusEligible;
+    }
+
+    @Override
+    public String getName() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public int getEmployeeNumber() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public String getJobTitle() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
 }

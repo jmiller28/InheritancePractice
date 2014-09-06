@@ -1,6 +1,5 @@
 package myinterface;
-import java.util.Date;
-import java.time.LocalDate;
+
 import java.util.Calendar;
 
 public class HourlyEmployee implements Employee {
@@ -10,9 +9,8 @@ public class HourlyEmployee implements Employee {
     private char middleInitial;
     private int employeeNumber;
     private Calendar startDate;
-    private Calendar currentDate;
     private double hourlyRate;
-    private int lengthOfService;
+    Calendar currentDate = Calendar.getInstance();
 
     public double getHourlyRate() {
         return hourlyRate;
@@ -22,8 +20,7 @@ public class HourlyEmployee implements Employee {
         //validation goes here
         this.hourlyRate = hourlyRate;
     }
-    Calendar rightNow = Calendar.getInstance();
-    
+
     @Override
     public int getEmployeeNumber() {
         return employeeNumber;
@@ -80,15 +77,14 @@ public class HourlyEmployee implements Employee {
     }
 
     @Override
-    public long getLengthOfService() {
-        //startDate = getStartDate();
-        return rightNow.compareTo(getStartDate()) ;
+    public double getYearsOfService() {
+        long milsecs1 = startDate.getTimeInMillis();
+        long milsecs2 = currentDate.getTimeInMillis();
+        long diff = milsecs2 - milsecs1;
+        long ddays = diff / (24 * 60 * 60 * 1000);
+        double yearsOfService = ddays / 365.0;
+        yearsOfService = Math.floor(yearsOfService);
+        return yearsOfService;
     }
-
-    void setstartDate(Calendar c) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
- 
 
 }
