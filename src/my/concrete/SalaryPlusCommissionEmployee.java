@@ -1,12 +1,12 @@
 package my.concrete;
 
+import java.util.Calendar;
+
 public class SalaryPlusCommissionEmployee extends SalariedEmployee {
 
     private double commissionPercent;
-
-    public SalaryPlusCommissionEmployee(String name, int employeeNumber, String jobTitle) {
-        super(name, employeeNumber, jobTitle);
-    }
+    private Calendar startDate;
+    private Calendar currentDate = Calendar.getInstance();
 
     public double getCommissionPercent() {
         return commissionPercent;
@@ -16,4 +16,24 @@ public class SalaryPlusCommissionEmployee extends SalariedEmployee {
         this.commissionPercent = commissionPercent;
     }
 
+    @Override
+    public Calendar getStartDate() {
+        return startDate;
+    }
+
+    @Override
+    public void setStartDate(Calendar startDate) {
+        //validation goes here
+        this.startDate = startDate;
+    }
+
+    @Override
+    public double getYearsOfService() {
+        long milsecs1 = startDate.getTimeInMillis();
+        long milsecs2 = currentDate.getTimeInMillis();
+        long diff = milsecs2 - milsecs1;
+        long ddays = diff / (24 * 60 * 60 * 1000);
+        double yearsOfService = ddays / 365.0;
+        return yearsOfService;
+    }
 }

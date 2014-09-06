@@ -2,34 +2,45 @@ package my.concrete;
 
 public class Employee {
 
-    private String name;
+    private String lastName;
+    private String firstName;
+    private char middleInitial;
     private int employeeNumber;
-    private String jobTitle;
-
-    public Employee(String name, int employeeNumber, String jobTitle) {
-        this.name = name;
-        this.employeeNumber = employeeNumber;
-        this.jobTitle = jobTitle;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
 
     public int getEmployeeNumber() {
         return employeeNumber;
     }
 
-    public String getJobTitle() {
-        return jobTitle;
+    public String getLastName() {
+        return lastName;
     }
 
-    public void setJobTitle(String jobTitle) {
-        this.jobTitle = jobTitle;
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    public char getMiddleInitial() {
+        return middleInitial;
+    }
+
+    public void setMiddleInitial(char middleInitial) {
+        this.middleInitial = middleInitial;
+    }
+
+    public void setEmployeeNumber(int employeeNumber) {
+        this.employeeNumber = employeeNumber;
+    }
+
+    public double getYearsOfService() {
+        return 0.0;
     }
 
 }

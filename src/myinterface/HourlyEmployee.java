@@ -8,9 +8,9 @@ public class HourlyEmployee implements Employee {
     private String firstName;
     private char middleInitial;
     private int employeeNumber;
-    private Calendar startDate;
     private double hourlyRate;
-    Calendar currentDate = Calendar.getInstance();
+    private Calendar startDate;
+    private Calendar currentDate = Calendar.getInstance();
 
     public double getHourlyRate() {
         return hourlyRate;
@@ -55,12 +55,12 @@ public class HourlyEmployee implements Employee {
     }
 
     @Override
-    public char getMiddleIntial() {
+    public char getMiddleInitial() {
         return middleInitial;
     }
 
     @Override
-    public void setMiddleIntial(char middleInitial) {
+    public void setMiddleInitial(char middleInitial) {
         //validation goes here
         this.middleInitial = middleInitial;
     }

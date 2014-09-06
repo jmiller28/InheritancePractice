@@ -49,12 +49,12 @@ public class SalariedEmployee implements Employee {
     }
 
     @Override
-    public char getMiddleIntial() {
+    public char getMiddleInitial() {
         return middleInitial;
     }
 
     @Override
-    public void setMiddleIntial(char middleInitial) {
+    public void setMiddleInitial(char middleInitial) {
         //validation goes here
         this.middleInitial = middleInitial;
     }

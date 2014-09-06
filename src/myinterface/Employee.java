@@ -12,9 +12,9 @@ public interface Employee {
 
     public abstract void setLastName(String lastName);
 
-    public abstract char getMiddleIntial();
+    public abstract char getMiddleInitial();
 
-    public abstract void setMiddleIntial(char middleInitial);
+    public abstract void setMiddleInitial(char middleInitial);
 
     public abstract int getEmployeeNumber();
 
