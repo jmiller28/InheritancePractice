@@ -1,14 +1,15 @@
 package myabstract;
 
+import java.util.Calendar;
+
 public class SalariedEmployee extends Employee {
 
     private boolean isExempt;
     private double annualSalary;
     private boolean isBonusEligible;
+    private Calendar startDate;
+    private Calendar currentDate = Calendar.getInstance();
 
-    public SalariedEmployee(String name, int employeeNumber, String jobTitle) {
-        //super(name, employeeNumber, jobTitle);
-    }
 
     public boolean isIsExempt() {
         return isExempt;
@@ -33,20 +34,25 @@ public class SalariedEmployee extends Employee {
     public void setIsBonusEligible(boolean isBonusEligible) {
         this.isBonusEligible = isBonusEligible;
     }
-
-    @Override
-    public String getName() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    
+    public Calendar getStartDate() {
+        return startDate;
+    }
+    
+    public void setStartDate(Calendar startDate) {
+        //validation goes here
+        this.startDate = startDate;
     }
 
     @Override
-    public int getEmployeeNumber() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    @Override
-    public String getJobTitle() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public double getYearsOfService() {
+        long milsecs1 = startDate.getTimeInMillis();
+        long milsecs2 = currentDate.getTimeInMillis();
+        long diff = milsecs2 - milsecs1;
+        long ddays = diff / (24 * 60 * 60 * 1000);
+        double yearsOfService = ddays / 365.0;
+        yearsOfService = Math.ceil(yearsOfService);
+        return yearsOfService;
     }
 
 }

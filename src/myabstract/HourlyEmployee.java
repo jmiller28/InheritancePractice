@@ -1,17 +1,12 @@
 package myabstract;
 
+import java.util.Calendar;
+
 public class HourlyEmployee extends Employee {
 
     private double hourlyRate;
-    private String name;
-    private int employeeNumber;
-    private String jobTitle;
-    
-    public void Employee(String name, int employeeNumber, String jobTitle) {
-        this.name = name;
-        this.employeeNumber = employeeNumber;
-        this.jobTitle = jobTitle;
-    }
+    private Calendar startDate;
+    private Calendar currentDate = Calendar.getInstance();
 
     public double getHourlyRate() {
         return hourlyRate;
@@ -22,31 +17,25 @@ public class HourlyEmployee extends Employee {
     }
 
     @Override
-    public String getName() {
-        return name;
+    public Calendar getStartDate() {
+        return startDate;
     }
 
     @Override
-    public void setName(String name) {
-        this.name = name;
+    public void setStartDate(Calendar startDate) {
+        //validation goes here
+        this.startDate = startDate;
     }
 
     @Override
-    public int getEmployeeNumber() {
-        return employeeNumber;
+    public double getYearsOfService() {
+        long milsecs1 = startDate.getTimeInMillis();
+        long milsecs2 = currentDate.getTimeInMillis();
+        long diff = milsecs2 - milsecs1;
+        long ddays = diff / (24 * 60 * 60 * 1000);
+        double yearsOfService = ddays / 365.0;
+        yearsOfService = Math.floor(yearsOfService);
+        return yearsOfService;
     }
 
-    public void setEmployeeNumber(int employeeNumber) {
-        this.employeeNumber = employeeNumber;
-    }
-
-    @Override
-    public String getJobTitle() {
-        return jobTitle;
-    }
-
-    @Override
-    public void setJobTitle(String jobTitle) {
-        this.jobTitle = jobTitle;
-    }
 }
